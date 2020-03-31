@@ -21,3 +21,4 @@ To Do:
 1. Script playbook and bash to prompt for interfaces > 1
 2. Prompt for entering {interface name, staticip and gateway} == {times(prompt_number_of_interfaces_entered)}
 3. Configure multiple Static IPs on a single ethernet interface.
+4. Replace the bash part with Python3.
