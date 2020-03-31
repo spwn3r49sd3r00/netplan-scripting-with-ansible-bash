@@ -1,4 +1,7 @@
 # netplan-scripting-with-ansible-bash
+
+Author: Shail Patel
+
 Automation using ansible: To configure netplan using bash and ansible.
 
 Description:
