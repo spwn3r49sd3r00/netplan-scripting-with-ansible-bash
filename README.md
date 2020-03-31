@@ -6,7 +6,7 @@ Automation using ansible: To configure netplan using bash and ansible.
 
 Description:
 
-This is a simple user interactive ansible playbook to statically configure Ubuntu 18.04 Desktop netplan interfaces. This playbook Leverages a statically configured bash script to configure netplan for a single interface using a single static IP and a gateway.
+This is a simple user interactive ansible playbook to statically configure Ubuntu 18.04 Server netplan interfaces. This playbook Leverages a statically configured bash script to configure netplan for a single interface using a single static IP and a gateway.
 
 Usage:
 
