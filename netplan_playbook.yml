@@ -1,0 +1,32 @@
+---
+- hosts: "your_remote_hostname_from_ansible_hosts"
+  tasks:
+    - name: Available network information
+      vars:
+       msg: |
+        All Interface List: {{ ansible_interfaces }}
+        All IP: {{ ansible_all_ipv4_addresses }}
+        Gateway: {{ ansible_default_ipv4.gateway }}
+      debug:
+       msg: "{{ msg.split('\n') }}"
+
+  vars_prompt:
+    #- name: "res"
+    #  prompt: "Please enter the number of interfaces you want to configure for netplan: (eg. 1,2,...)"
+    #  private: no
+
+    - name: "netcfg"
+      prompt: "Enter the interface name ( eg. ens33:) "
+      private: no
+
+    - name: "static"
+      prompt: "Enter the static IP of the server in CIDR notation: (eg. 192.168.85.11/24)"
+      private: no
+
+    - name: "gateway"
+      prompt: "Enter the IP of your gateway:"
+      private: no
+
+  tasks:
+    - name: Now configuring netplan....please wait..
+      command: /pathto/scriptnetplan.sh {{ static }} {{ gateway }} {{netcfg }} {{ res }}
